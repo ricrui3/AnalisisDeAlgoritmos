@@ -24,8 +24,8 @@ def partir(A, p, q):
     intercambiar(A, p, a)
     pivote = A[p]
     i = p
-    for j in range(i + 1, q):
-        if A[j] == pivote:
+    for j in range(i + 1, q + 1):
+        if A[j] <= pivote:
             i = i + 1
             intercambiar(A, i, j)
     intercambiar(A, p, i)
@@ -45,6 +45,8 @@ def creacionArreglo(A, n):
     return A
 
 
+# A = [10,88,13,15,6]
+# n = 5
 A = []
 n = input()
 creacionArreglo(A, n)
