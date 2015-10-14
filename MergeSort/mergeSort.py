@@ -63,5 +63,9 @@ def mezclar(i, d, ti, td):
         return A
 
 
-A = [5, 8 , 1, 6, 3]
-print(mergeSort(A, 5))
+A = []
+n = input()
+for x in range(0,n):
+    aux = input()
+    A.append(aux)
+print(mergeSort(A, n))
