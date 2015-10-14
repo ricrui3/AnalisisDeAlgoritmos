@@ -20,4 +20,4 @@ A = []
 n = input()
 creacionArreglo(A,n)
 insertionSort(A,n)
-
+print(A)
