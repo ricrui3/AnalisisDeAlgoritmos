@@ -43,24 +43,25 @@ def mezclar(i, d, ti, td):
         ai = 0
         ad = 0
         j = 0
-        generator = (x for x in range(ti + td - 1))
-        A = list(generator)
+        #generator = (x for x in range(ti + td - 1))
+        A = []
 
-        while ai < ti and ad < td:
-            if i[ai] <= d[ad]:
-                A[j] = i[ai]
-                ai = ai + 1
-            else:
-                A[j] = d[ad]
-                ad = ad + 1
-            j = j + 1
+        while ai <= ti-1 and ad <= td-1:
+                if i[ai] <= d[ad]:
+                    A.append(i[ai])
+                    ai = ai + 1
+                else:
+                    A.append(d[ad])
+                    ad = ad + 1
 
-        if ai <= ti:
-            A.append(list(i[ai-1:ti]))
+        if ai < ti:
+            for x in range(ai,ti):
+                A.append(i[x])
         else:
-            A.append(copiar(d, ad, td))
+            for x in range(ad,td):
+                A.append(d[x])
         return A
 
 
-A = [5, 8, 6, 3]
-mergeSort(A, 4)
+A = [5, 8 , 1, 6, 3]
+print(mergeSort(A, 5))
