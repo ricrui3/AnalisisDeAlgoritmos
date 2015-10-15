@@ -1,0 +1,3 @@
+plot "valoresGenerales.csv" using 1:2 title 'QuickSort' with lines, \
+     "valoresGenerales.csv" using 1:3 title 'MergeSort' with lines, \
+     "valoresGenerales.csv" using 1:4 title 'InsertionSort' with lines
