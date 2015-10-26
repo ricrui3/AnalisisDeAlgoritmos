@@ -1,6 +1,7 @@
 __author__ = 'MrRubik'
 
 def algortimoIngenuo(A,B):
+    n = len(A)
     C = crearTabla(n,0);
     for i in range(n):
         for j in range(n):
@@ -14,10 +15,14 @@ def crearTabla(n,num):
         M.append([num]*n)
     return M
 
-n = input("Cuantas columnas y filas desea?")
-A = crearTabla(n,1)
-B = crearTabla(n,1)
-C = algortimoIngenuo(A,B)
-for i in range(n):
-    print C[i]
+def inicio():
+    n = input("Cuantas columnas y filas desea?")
+    A = crearTabla(n,1)
+    B = crearTabla(n,1)
+    C = algortimoIngenuo(A,B)
+    for i in range(n):
+        print C[i]
+
+inicio()
+
 
