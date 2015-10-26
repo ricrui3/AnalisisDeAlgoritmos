@@ -1,7 +1,0 @@
-##############################################################################################
-#
-# El algoritmo "ingenuo" es la forma mas facil de programar una multiplicacion de matrices
-# pues practicamente to_do se reduce a 3 ciclos "for" sin enmbargo segun lo visto en clase
-# la complejidad es de n^3
-#
-##############################################################################################

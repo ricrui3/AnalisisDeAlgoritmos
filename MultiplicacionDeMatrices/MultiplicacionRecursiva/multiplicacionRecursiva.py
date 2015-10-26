@@ -2,7 +2,7 @@
 __author__ = 'MrRubik'
 
 
-def algoritmoRecursivo(A, B):
+def multiplicacionRecursiva(A, B):
     n = len(A)
     C = crearMatriz(n,0)
     a,b,c,d = partir(A)
@@ -81,7 +81,7 @@ def inicio():
     n = input("Cuantas columnas y filas desea?")
     A = crearMatriz(n,1)
     B = crearMatriz(n,1)
-    C = algoritmoRecursivo(A,B)
+    C = multiplicacionRecursiva(A,B)
     for i in range(n):
         print C[i]
 
