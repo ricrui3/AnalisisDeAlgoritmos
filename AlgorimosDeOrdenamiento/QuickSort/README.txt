@@ -8,6 +8,6 @@
 *generar un nuevo archivo numeros.txt correr el siguiente comando en la carpeta de 
 *generador:
 
-	python generador.py < valores.txt > ../QuickSort/numeros.txt
+	python quickSort.py < ../NumerosRandom/numeros2_8.txt > ordenados.txt
 
 *NOTA: Para mas información leer el README en la carpeta ya mencionada	
