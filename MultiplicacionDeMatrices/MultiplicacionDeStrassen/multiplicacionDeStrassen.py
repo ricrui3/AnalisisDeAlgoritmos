@@ -17,7 +17,11 @@ def multiplicacionDeStrassen(A, B):
         p6 = multiplicacionDeStrassen(restaDeMatrices(b,d),sumaDeMatrices(g,h))
         p7 = multiplicacionDeStrassen(restaDeMatrices(a,c), sumaDeMatrices(e,f))
 
-        r = sumaDeMatrices(restaDeMatrices(sumaDeMatrices(p5,p4),p2),p6)
+
+        op1 = sumaDeMatrices(p5,p4)
+        op2 = restaDeMatrices(op1,p2)
+        op3 = sumaDeMatrices(op2,p6)
+        r = sumaDeMatrices(restaDeMatrices(sumaDeMatrices(p5,p4), p2),p6)
         s = sumaDeMatrices(p1,p2)
         t = sumaDeMatrices(p3,p4)
         u = restaDeMatrices(restaDeMatrices(sumaDeMatrices(p5,p1),p3),p7)
@@ -28,7 +32,9 @@ def multiplicacionDeStrassen(A, B):
         copiarMatricesPequenoAgrande(u,C,n/2,n,n/2,n)
         return C
     else:
-        return A[0][0]*B[0][0]
+        C = []
+        C.append([A[0][0]*B[0][0]])
+        return C
 
 def restaDeMatrices(A, B):
     n = len(A)

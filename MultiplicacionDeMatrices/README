@@ -1,0 +1,8 @@
+***************************************************************************
+* Los tres algoritmos programados en esta carpeta, tienen como objetivo
+* multiplicar matrices cuadradas donde el numero de renglones y columnas
+* es igual a alguna potencia de 2 (2^1,2^2,2^3...), no se garantiza su
+* funcionamiento para matrices de algun otro tipo, aunque los programas
+* aqui presente pueden servir como buena base para programar alguno mas
+* pesado
+***************************************************************************
