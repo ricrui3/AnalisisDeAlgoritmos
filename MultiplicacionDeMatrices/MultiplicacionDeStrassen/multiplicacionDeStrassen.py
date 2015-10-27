@@ -54,7 +54,7 @@ def sumaDeMatrices(A, B):
 
 def algortimoIngenuo(A,B):
     n = len(A)
-    C = crearMatriz(n,0);
+    C = crearMatriz(n, 0)
     for i in range(n):
         for j in range(n):
             for k in range(n):
@@ -104,7 +104,7 @@ def crearMatriz(n,num):
     return M
 
 def inicio():
-    n = input("Cuantas columnas y filas desea?")
+    n = input()
     A = crearMatriz(n,1)
     B = crearMatriz(n,1)
     C = multiplicacionDeStrassen(A,B)

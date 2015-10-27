@@ -2,7 +2,7 @@ __author__ = 'MrRubik'
 
 def multiplicacionIngenua(A,B):
     n = len(A)
-    C = crearTabla(n,0);
+    C = crearTabla(n, 0)
     for i in range(n):
         for j in range(n):
             for k in range(n):
@@ -16,7 +16,7 @@ def crearTabla(n,num):
     return M
 
 def inicio():
-    n = input("Cuantas columnas y filas desea?")
+    n = input()
     A = crearTabla(n,1)
     B = crearTabla(n,1)
     C = multiplicacionIngenua(A,B)
