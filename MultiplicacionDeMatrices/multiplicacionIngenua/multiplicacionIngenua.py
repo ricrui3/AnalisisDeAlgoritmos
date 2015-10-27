@@ -20,8 +20,8 @@ def inicio():
     A = crearTabla(n,1)
     B = crearTabla(n,1)
     C = multiplicacionIngenua(A,B)
-    # for i in range(n):
-    #    print C[i]
+    for i in range(n):
+        print C[i]
 
 inicio()
 print("D:")
