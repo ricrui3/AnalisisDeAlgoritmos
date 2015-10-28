@@ -1,0 +1,6 @@
+***************************************************************************
+* En este algoritmo de fibonacci se hace uso de memoria extra para hacer
+* los calculos y que no repitamos operaciones ya realizadas, la diferencia
+* es francamente notoria pues sin problemas podemos realizar Fibonacci(100)
+* y recibir el resultado en un santiamen
+***************************************************************************

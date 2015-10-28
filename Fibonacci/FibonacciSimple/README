@@ -1,0 +1,6 @@
+***********************************************************************
+* El codigo de fibonacci que se encuentra aqui es el ejemplo mas común
+* utilizado para mostrar lo que es la recursividad, sin embargo  es
+* obvio el esfuerzo que hace pues al pedir cualquier pocision de fibo-
+* nacci mayor a 30 la operacion tarda un tiempo considerable
+***********************************************************************
