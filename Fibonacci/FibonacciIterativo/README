@@ -1,0 +1,7 @@
+************************************************************************
+* ¿Os acordais de ese algoritmo en donde utilizabamos memoria para hacer
+* el algortimo de fibonacci recursivo lineal? pues este algoritmo es
+* tambien lineal sin embargo, no es recursivo y utiliza infinitamente
+* menos memoria pues los valores solo se guardan en 3 variables y solo
+* se utiliza un ciclo for
+************************************************************************
