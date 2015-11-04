@@ -17,10 +17,6 @@ def multiplicacionDeStrassen(A, B):
         p6 = multiplicacionDeStrassen(restaDeMatrices(b,d),sumaDeMatrices(g,h))
         p7 = multiplicacionDeStrassen(restaDeMatrices(a,c), sumaDeMatrices(e,f))
 
-
-        op1 = sumaDeMatrices(p5,p4)
-        op2 = restaDeMatrices(op1,p2)
-        op3 = sumaDeMatrices(op2,p6)
         r = sumaDeMatrices(restaDeMatrices(sumaDeMatrices(p5,p4), p2),p6)
         s = sumaDeMatrices(p1,p2)
         t = sumaDeMatrices(p3,p4)

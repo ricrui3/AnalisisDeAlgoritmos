@@ -24,6 +24,5 @@ def inicio():
     #    print C[i]
 
 inicio()
-print("D:")
 
 
