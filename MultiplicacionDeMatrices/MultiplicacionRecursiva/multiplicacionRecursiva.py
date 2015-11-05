@@ -7,10 +7,10 @@ def multiplicacionRecursiva(A, B):
     C = crearMatriz(n,0)
     a,b,c,d = partir(A)
     e,f,g,h = partir(B)
-    c1  = sumaDeMatrices(algortimoIngenuo(a,e),algortimoIngenuo(b,g))
-    c2  = sumaDeMatrices(algortimoIngenuo(a,f),algortimoIngenuo(b,h))
-    c3  = sumaDeMatrices(algortimoIngenuo(c,e),algortimoIngenuo(d,g))
-    c4  = sumaDeMatrices(algortimoIngenuo(c,f),algortimoIngenuo(d,h))
+    c1 = sumaDeMatrices(multiplicacionRecursiva(a, e), multiplicacionRecursiva(b, g))
+    c2 = sumaDeMatrices(multiplicacionRecursiva(a, f), multiplicacionRecursiva(b, h))
+    c3 = sumaDeMatrices(multiplicacionRecursiva(c, e), multiplicacionRecursiva(d, g))
+    c4 = sumaDeMatrices(multiplicacionRecursiva(c, f), multiplicacionRecursiva(d, h))
     copiarMatricesPequenoAgrande(c1,C,0,n/2,0,n/2)
     copiarMatricesPequenoAgrande(c2,C,0,n/2,n/2,n)
     copiarMatricesPequenoAgrande(c3,C,n/2,n,0,n/2)
@@ -82,8 +82,8 @@ def inicio():
     A = crearMatriz(n,1)
     B = crearMatriz(n,1)
     C = multiplicacionRecursiva(A,B)
-    # for i in range(n):
-    #    print C[i]
+    for i in range(n):
+        print C[i]
 
 
 # A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
