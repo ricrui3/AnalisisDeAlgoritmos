@@ -4,6 +4,7 @@
 # A es el arreglo de numeros a ordenar
 # n es el numero de elementos del arreglo
 
+# noinspection PyPep8Naming,PyPep8Naming,PyPep8Naming
 def mergeSort(A, n):
     if n == 0 or n == 1:
         return A
@@ -38,34 +39,34 @@ def mezclar(i, d, ti, td):
         A = copiar(d, 0, td)
         return A
     else:
-        #ai posicion para el nuevo arreglo ordenado
-        #ti tamaño izquierdo
+        # ai posicion para el nuevo arreglo ordenado
+        # ti tamaño izquierdo
         ai = 0
         ad = 0
         j = 0
-        #generator = (x for x in range(ti + td - 1))
+        # generator = (x for x in range(ti + td - 1))
         A = []
 
-        while ai <= ti-1 and ad <= td-1:
-                if i[ai] <= d[ad]:
-                    A.append(i[ai])
-                    ai = ai + 1
-                else:
-                    A.append(d[ad])
-                    ad = ad + 1
+        while ai <= ti - 1 and ad <= td - 1:
+            if i[ai] <= d[ad]:
+                A.append(i[ai])
+                ai += 1
+            else:
+                A.append(d[ad])
+                ad += 1
 
         if ai < ti:
-            for x in range(ai,ti):
+            for x in range(ai, ti):
                 A.append(i[x])
         else:
-            for x in range(ad,td):
+            for x in range(ad, td):
                 A.append(d[x])
         return A
 
 
 A = []
 n = input()
-for x in range(0,n):
+for x in range(0, n):
     aux = input()
     A.append(aux)
 print(mergeSort(A, n))

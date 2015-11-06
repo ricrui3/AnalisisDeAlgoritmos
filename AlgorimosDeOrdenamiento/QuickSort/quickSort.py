@@ -1,6 +1,6 @@
+import random
 # coding=utf-8
 __author__ = 'Ricardo Ruiz Maldonado'
-import random
 
 
 def quickSort(A, n):
@@ -26,7 +26,7 @@ def partir(A, p, q):
     i = p
     for j in range(i + 1, q + 1):
         if A[j] <= pivote:
-            i = i + 1
+            i += 1
             intercambiar(A, i, j)
     intercambiar(A, p, i)
     return i
