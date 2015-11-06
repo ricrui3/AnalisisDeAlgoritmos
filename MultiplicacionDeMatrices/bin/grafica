@@ -1,0 +1,3 @@
+plot "tiempos2.csv" using 1:2 title 'Ingenua' with lines, \
+     "tiempos2.csv" using 1:3 title 'Recursiva' with lines, \
+     "tiempos2.csv" using 1:4 title 'Strassen' with lines

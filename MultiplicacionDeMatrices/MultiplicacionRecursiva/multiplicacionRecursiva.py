@@ -4,17 +4,29 @@ __author__ = 'MrRubik'
 
 def multiplicacionRecursiva(A, B):
     n = len(A)
+    if n == 1:
+        return multiplicacionDeMatrices(A, B)
+    else:
+        C = crearMatriz(n, 0)
+        a, b, c, d = partir(A)
+        e, f, g, h = partir(B)
+        c1 = sumaDeMatrices(multiplicacionRecursiva(a, e), multiplicacionRecursiva(b, g))
+        c2 = sumaDeMatrices(multiplicacionRecursiva(a, f), multiplicacionRecursiva(b, h))
+        c3 = sumaDeMatrices(multiplicacionRecursiva(c, e), multiplicacionRecursiva(d, g))
+        c4 = sumaDeMatrices(multiplicacionRecursiva(c, f), multiplicacionRecursiva(d, h))
+        copiarMatricesPequenoAgrande(c1, C, 0, n / 2, 0, n / 2)
+        copiarMatricesPequenoAgrande(c2, C, 0, n / 2, n / 2, n)
+        copiarMatricesPequenoAgrande(c3, C, n / 2, n, 0, n / 2)
+        copiarMatricesPequenoAgrande(c4, C, n / 2, n, n / 2, n)
+        return C
+
+
+def multiplicacionDeMatrices(A, B):
+    n = len(A)
     C = crearMatriz(n,0)
-    a,b,c,d = partir(A)
-    e,f,g,h = partir(B)
-    c1 = sumaDeMatrices(multiplicacionRecursiva(a, e), multiplicacionRecursiva(b, g))
-    c2 = sumaDeMatrices(multiplicacionRecursiva(a, f), multiplicacionRecursiva(b, h))
-    c3 = sumaDeMatrices(multiplicacionRecursiva(c, e), multiplicacionRecursiva(d, g))
-    c4 = sumaDeMatrices(multiplicacionRecursiva(c, f), multiplicacionRecursiva(d, h))
-    copiarMatricesPequenoAgrande(c1,C,0,n/2,0,n/2)
-    copiarMatricesPequenoAgrande(c2,C,0,n/2,n/2,n)
-    copiarMatricesPequenoAgrande(c3,C,n/2,n,0,n/2)
-    copiarMatricesPequenoAgrande(c4,C,n/2,n,n/2,n)
+    for i in range(n):
+        for j in range(n):
+            C[i][j] = A[i][j] * B[i][j]
     return C
 
 
