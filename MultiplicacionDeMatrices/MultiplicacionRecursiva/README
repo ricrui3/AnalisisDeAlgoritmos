@@ -3,6 +3,6 @@
 # El algoritmo "recursivo" no es la forma mas facil de programar una multiplicacion de matrices
 # y debido a que tenemos que divider nuestras dos matrices en 8 la complejidad termina siendo de
 # n^(log(2)8) donde (log(2)8) = 3 por lo tanto la complejidad sigue siendo cubica y no ganamos
-# ni velocidad de programación ni velocidad de procesamiento.
+# ni velocidad de programacion ni velocidad de procesamiento.
 #
 ##############################################################################################
