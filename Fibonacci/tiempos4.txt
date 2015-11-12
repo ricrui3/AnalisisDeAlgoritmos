@@ -1,0 +1,7 @@
+tamaño        Simple        Memoria        Iterativo        Tramposo        Chido
+4194304        x.xxx        x.xxx        xx.xxx        0.01        2.72
+8388608        x.xxx        x.xxx        xx.xxx        0.02        7.99
+16777216        x.xxx        x.xxx        xx.xxx        0.01        23.51
+33554432        x.xxx        x.xxx        xx.xxx        0.01        70.07
+67108864        x.xxx        x.xxx        xx.xxx        0.01        211.07
+134217728        x.xxx        x.xxx        xx.xxx        0.02        634.89

@@ -1,0 +1,6 @@
+tamaño        Simple        Memoria        Iterativo        Tramposo        Chido
+32        x.xxx        0.02        0.01        0.01        0.01
+64        x.xxx        0.01        0.02        0.02        0.01
+128        x.xxx        0.01        0.01        0.02        0.02
+256        x.xxx        0.02        0.01        0.01        0.00
+512        x.xxx        0.02        0.01        0.02        0.01
