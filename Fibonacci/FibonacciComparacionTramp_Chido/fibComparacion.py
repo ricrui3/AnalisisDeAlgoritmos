@@ -1,5 +1,7 @@
 __author__ = 'mrubik'
 
+import math
+
 
 def mult_matrices(matriz, matriz1):
     aux = [[0, 0], [0, 0]]
@@ -31,10 +33,34 @@ def fibonacci_chido(n):
     return aux[0][1]
 
 
+def mipow(a, n):
+    if n == 0:
+        return 1
+    if n == 1:
+        return a
+    if n > 1:
+        if n % 2 == 0:
+            t = mipow(a, n / 2)
+            return t * t
+        else:
+            t = mipow(a, (n - 1) / 2)
+            return t * t * a
+
+
+def fibonacciTramposo(n):
+    phi = (1 + math.sqrt(5)) / 2
+    t = mipow(phi, n)
+    return t / math.sqrt(5)
+
+
 def inicio():
-    n = input()
-    fb = fibonacci_chido(n)
-    # print(fb)
+    # n = input()
+    pot_dos = 10
+    for x in range(pot_dos):
+        fbT = fibonacciTramposo(mipow(2, x))
+        fbC = fibonacci_chido(mipow(2, x))
+        aux = fbC - fbT
+        print(mipow(2, x).__str__() + "    " + fbT.__str__() + "      " + fbC.__str__() + "     " + aux.__str__())
 
 
 inicio()

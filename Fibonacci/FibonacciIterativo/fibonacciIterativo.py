@@ -17,7 +17,7 @@ def fibonacciIterativo(n):
 def inicio():
     n = input()
     fb = fibonacciIterativo(n)
-    print(fb)
+    # print(fb)
 
 
 inicio()

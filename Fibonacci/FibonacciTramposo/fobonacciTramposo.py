@@ -26,7 +26,7 @@ def fibonacciTramposo(n):
 def inicio():
     n = input()
     fb = fibonacciTramposo(n)
-    print(fb)
+    # print(fb)
 
 
 inicio()

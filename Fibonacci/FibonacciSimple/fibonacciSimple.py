@@ -13,7 +13,7 @@ def fibonacciSimple(n):
 def inicio():
     n = input()
     fb = fibonacciSimple(n)
-    print(fb)
+    # print(fb)
 
 
 inicio()
