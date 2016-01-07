@@ -4,6 +4,7 @@ def mayor(param, param1):
     elif param1 > param:
         return param1
 
+print("camios")
 
 def lcs(x, y, i, j):
     if i >= 0 and j >= 0:
