@@ -7,10 +7,10 @@ import random
 #	li = primer numero posible a generar
 #   ls = ultimo numero posible a generar 
 def generador(n, li, ls):
-	print "%d" % (n)
-	for x in xrange(1, n + 1):
+	print(n)
+	for x in range(1, n + 1):
 		rI = random.randint(li, ls)
-		print "%d" % (rI)
+		print(rI)
 	pass
 
 
