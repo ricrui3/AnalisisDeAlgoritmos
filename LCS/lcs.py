@@ -75,9 +75,9 @@ pila_LCS = []
 lcs(x, y, i, j)
 cadena_final_lcs()
 
-print(x)
-print(y)
-
+# print(x)
+# print(y)
+#
 # print("\n")
 # for i in range(n):
 #     print(matriz_LCS[i])
@@ -85,8 +85,8 @@ print(y)
 # print("\n")
 # for i in range(n):
 #     print(matriz_flechas[i])
-
-print("\n")
-print(pila_LCS)
-for i in range(len(pila_LCS)):
-    print(pila_LCS.pop())
+#
+# print("\n")
+# print(pila_LCS)
+# for i in range(len(pila_LCS)):
+#     print(pila_LCS.pop())
