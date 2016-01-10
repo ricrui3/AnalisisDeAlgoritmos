@@ -49,10 +49,10 @@ def crearMatriz(n, num):
     return M
 
 
-# n es el tamaño de la cadena
+# n es el tamanio de la cadena
 # x es la primer cadena
 # y es la segunda cadena
-# j e i son el tamño de la cadena 'x' y 'y' respectivamente
+# j e i son el tamanio de la cadena 'x' y 'y' respectivamente
 # matriz_LCS es donde se guarda la matriz de valores
 # matriz_flechas es donde se guardan las felchas correspondientes para conseguir la cadena
 #   0 significa diagonal
@@ -78,13 +78,13 @@ cadena_final_lcs()
 print(x)
 print(y)
 
-print("\n")
-for i in range(n):
-    print(matriz_LCS[i])
-
-print("\n")
-for i in range(n):
-    print(matriz_flechas[i])
+# print("\n")
+# for i in range(n):
+#     print(matriz_LCS[i])
+#
+# print("\n")
+# for i in range(n):
+#     print(matriz_flechas[i])
 
 print("\n")
 print(pila_LCS)
