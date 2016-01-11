@@ -79,13 +79,13 @@ cadena_final_lcs()
 print(x)
 print(y)
 
-print("\n")
-for i in range(n):
-    print(matriz_LCS[i])
-
-print("\n")
-for i in range(n):
-    print(matriz_flechas[i])
+# print("\n")
+# for i in range(n):
+#     print(matriz_LCS[i])
+#
+# print("\n")
+# for i in range(n):
+#     print(matriz_flechas[i])
 
 print("\n")
 
