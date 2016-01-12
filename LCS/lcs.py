@@ -49,6 +49,8 @@ def crearMatriz(n, num):
     return M
 
 
+# ---
+
 # n es el tamanio de la cadena
 # x es la primer cadena
 # y es la segunda cadena

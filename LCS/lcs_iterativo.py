@@ -28,6 +28,8 @@ def cadena_final_lcs():
             i -= 1
 
 
+# ----
+
 def creacion_cadena(A, n):
     for i in range(0, n):
         aux = str(input())

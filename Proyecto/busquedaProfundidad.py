@@ -2,12 +2,13 @@ def bp(s):
     for i in matriz_adj[s]:
         if parent.index(matriz_adj[s][i]) is ValueError:
             parent.append(matriz_adj[s][i])
-            bp()
 
 
 def bp_visita():
     return 0
 
+
+# why is it not showing?
 
 def recibir_grafo():
     return 0
