@@ -8,18 +8,18 @@ def dijkstra(G, Ma, s):
         return -1
 
     vDdelta[posicion(G, s)] = 0
-    Q = []
+    Q = crearVectorI(n)
     V = list(G[0: n])
 
     print(V)
     # while (not V):
-    while (len(V) > 0):
+    while lenV >= 0:
 
         u = menor(V, vDdelta)  # devuelve el ID
         mover(u, V, Q)
         renglon = posicion(G, u)
         for i in range(0, n):
-            if Ma[renglon][i] != None and Ma[renglon][i] != float('inf'):
+            if Ma[renglon][i] != None and Ma[renglon][i] != float('inf') and Ma[renglon][i] != 0:
                 relajar(renglon, i, vDdelta, vPi, Ma)
 
     return vDdelta, vPi
@@ -47,7 +47,7 @@ def posicion(nodos, nodo):
 
 
 def relajar(s, d, delta, pi, Ma):
-    if (delta[d] > delta[s] + Ma[s][d]):
+    if (delta[d] > (delta[s] + Ma[s][d])):
         delta[d] = delta[s] + Ma[s][d]
         pi[d] = s
         return
@@ -56,14 +56,10 @@ def relajar(s, d, delta, pi, Ma):
 
 
 def mover(u, V, Q):
-    for x in V:
-        if V[x] == u:
-            V.pop(x)
-        elif (u not in V):
-            return
-
-    Q.append(u)
-    print(Q)
+    global lenV
+    V[u] = None
+    Q[u] = u
+    lenV -= 1
     return
 
 
@@ -83,7 +79,11 @@ def crearMatriz(M, n):
     for i in range(n):
         strAux = input().split()
         for j in range(n):
-            aux.append(int(strAux[j]))
+            iaux = int(strAux[j])
+            if iaux == -1:
+                aux.append(float("inf"))
+            else:
+                aux.append(iaux)
         M.append(list(aux[0: n]))
         aux.clear()
     return M
@@ -101,6 +101,7 @@ def nombres_nodos(G, n):
 G = []
 Ma = []
 n = int(input())
+lenV = n
 
 nombres_nodos(G, n)
 crearMatriz(Ma, n)
