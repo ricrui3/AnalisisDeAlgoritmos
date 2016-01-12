@@ -1,0 +1,28 @@
+tamaño        lcs_rec        lcs_iter
+1        x.xx        0.02
+2        x.xx        0.01
+4        x.xx        0.02
+8        x.xx        0.01
+16        x.xx        0.02
+32        x.xx        0.02
+64        x.xx        0.01
+128        x.xx        0.05
+256        x.xx        0.10
+512        x.xx        0.24
+1024        x.xx        0.58
+2048        x.xx        2.42
+4096        x.xx        9.68
+8192        x.xx        38.72
+16384        x.xx        159.47
+32768        x.xx        Command terminated by signal 9
+9.33
+65536        x.xx        Command terminated by signal 9
+9.86
+131072        x.xx        Command terminated by signal 9
+7.85
+262144        x.xx        Command terminated by signal 9
+9.84
+524288        x.xx        Command terminated by signal 9
+5.40
+1048576        x.xx        Command terminated by signal 9
+4.33

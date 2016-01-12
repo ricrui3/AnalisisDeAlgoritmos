@@ -8,8 +8,6 @@ def bp_visita():
     return 0
 
 
-# why is it not showing?
-
 def recibir_grafo():
     return 0
 
