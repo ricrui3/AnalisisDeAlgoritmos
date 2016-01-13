@@ -1,33 +1,32 @@
-def bp(s):
-    for i in matriz_adj[s]:
-        if parent.index(matriz_adj[s][i]) is ValueError:
-            parent.append(matriz_adj[s][i])
+__author__ = 'mrubik'
 
 
-def bp_visita():
-    return 0
+def dfs(graph, start):
+    nodosVisitados = set()
+    pila = [start]
+    while pila:
+        nodo = pila.pop()
+        if nodo not in nodosVisitados:
+            nodosVisitados.add(nodo)
+            pila.extend(graph[nodo] - nodosVisitados)
+    return nodosVisitados
 
 
-def recibir_grafo():
-    return 0
-
-
-def crearMatriz(n):
-    M = []
-    aux = []
+def crear_matriz_dict(M, n):
+    aux = set()
     for i in range(n):
         strAux = input().split()
         for j in range(n):
-            aux.append(int(strAux[j]))
-        M.append(list(aux[0: n]))
+            iaux = int(strAux[j])
+            if iaux > 0:
+                aux.add(j)
+        M[i] = aux.copy()
         aux.clear()
     return M
 
 
 n = int(input())
-nom_nodos = ['A', 'B', 'C', 'D', 'E']
-matriz_adj = crearMatriz(n)
-parent = []
-
-for i in range(n):
-    print(matriz_adj[i])
+matriz_grafo = {}
+crear_matriz_dict(matriz_grafo, n)
+nodoInicial = int(input())
+print(dfs(matriz_grafo, nodoInicial))
