@@ -1,4 +1,4 @@
- def bfs(graph, start):
+def bfs(graph, start):
     nodosVisitados, cola = set(), [start]
     while cola:
         nodo = cola.pop(0)

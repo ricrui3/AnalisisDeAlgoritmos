@@ -1,0 +1,49 @@
+# G es el vector con el nombre de los nodos
+# Ma es la matriz de adjacencias
+# s es el nodo inicial
+
+dijkstra(G, Ma, s):
+    n <- Tamaño de G
+
+    #iniciamos el vector delta en infinitos
+    vDdelta = []
+    desde i hasta n
+        vDelta[i] <- inf
+
+    #iniciamos el vector pi en nulos
+    vPi = []
+    desde i hasta n
+        vPi[i] <- None
+
+    Si el nodo s no esta en el nodo con los nombres
+        Error, no se encontro el nodo en G
+        return error
+
+    #la posicion en el vector delta con el indice de la pocision
+    #del nodo inicial se inicializa en 0
+    vDdelta[posicion(G, s)] = 0
+
+    #Q es el vector donde se guardan los nodos ya visitados
+    #inicialmente no tiene ningun nodo
+    Q = []
+
+    #V es el vector de donde quitan los nodos ya visitados
+    #inicialmente tiene todos los nodos
+    V = []
+
+    mientras el tamaño de V no sea 0
+
+        #evalua los nodos sin visitar y regresa el que tenga el menor costo
+        u = menor(V, vDdelta)
+
+        #mueve el nodo recien visitado del vector V al vector Q
+        mover(u, V, Q)
+
+        #obtiene el renglon a usar de la Ma
+        renglon = posicion(G, u)
+
+        desde i hasta n
+            si Ma[renglon][i] no es nulo o cero o infinito
+                relajar(renglon, i, vDdelta, vPi, Ma)
+
+    return vDdelta, vPi

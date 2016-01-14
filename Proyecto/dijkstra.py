@@ -109,5 +109,7 @@ crearMatriz(Ma, n)
 s = int(input())
 
 delta, pi = dijkstra(G, Ma, s)
+print("vector delta")
 print(delta)
+print("vector pi")
 print(pi)
