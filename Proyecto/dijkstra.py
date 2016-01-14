@@ -11,8 +11,8 @@ def dijkstra(G, Ma, s):
     Q = crearVectorI(n)
     V = list(G[0: n])
 
-    print(V)
-    # while (not V):
+    # print(V)
+
     while lenV >= 0:
 
         u = menor(V, vDdelta)  # devuelve el ID
@@ -109,7 +109,7 @@ crearMatriz(Ma, n)
 s = int(input())
 
 delta, pi = dijkstra(G, Ma, s)
-print("vector delta")
+print("\nvector delta")
 print(delta)
 print("vector pi")
 print(pi)

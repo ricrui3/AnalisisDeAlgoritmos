@@ -1,14 +1,14 @@
 __author__ = 'mrubik'
 
 
-def dfs(graph, start):
+def bp(grafo, nodoI):
     nodosVisitados = set()
-    pila = [start]
+    pila = [nodoI]
     while pila:
         nodo = pila.pop()
         if nodo not in nodosVisitados:
             nodosVisitados.add(nodo)
-            pila.extend(graph[nodo] - nodosVisitados)
+            pila.extend(grafo[nodo] - nodosVisitados)
     return nodosVisitados
 
 
@@ -29,4 +29,4 @@ n = int(input())
 matriz_grafo = {}
 crear_matriz_dict(matriz_grafo, n)
 nodoInicial = int(input())
-print(dfs(matriz_grafo, nodoInicial))
+print(bp(matriz_grafo, nodoInicial))
