@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #maximo tamaño dos a la "k" a multiplicar
-k=21
+k=10
 
 #primer linea a imprimir
 echo "tamaño        lcs_rec        lcs_iter"
@@ -13,6 +13,6 @@ for (( i = 0; i < "$k"; i++ )); do
 	tiempo1=$((/usr/bin/time -f "%U" python lcs.py < cadenas/$valor_n.txt) 2>&1)
 	tiempo2=$((/usr/bin/time -f "%U" python lcs_iterativo.py < cadenas/$valor_n.txt) 2>&1)
 
-	echo "$valor_n        x.xx        $tiempo2"
+	echo "$valor_n        $tiempo1        $tiempo2"
 
 done

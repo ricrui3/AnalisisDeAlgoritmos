@@ -39,11 +39,9 @@ def creacion_cadena(A, n):
     for i in range(0, n):
         aux = str(input())
         A.append(aux)
-    return A
 
 
-def crearMatriz(n, num):
-    M = []
+def crearMatriz(M, n, num):
     for i in range(n):
         M.append([num] * n)
     return M
@@ -67,8 +65,10 @@ x = []
 y = []
 i = n - 1
 j = n - 1
-matriz_LCS = crearMatriz(n, "E")
-matriz_flechas = crearMatriz(n, "E")
+matriz_LCS = []
+crearMatriz(matriz_LCS, n, "E")
+matriz_flechas = []
+crearMatriz(matriz_flechas, n, "E")
 creacion_cadena(x, n)
 creacion_cadena(y, n)
 pila_LCS = []
@@ -78,20 +78,20 @@ pila_LCS_final = []
 lcs(x, y, i, j)
 cadena_final_lcs()
 
-# print(x)
-# print(y)
+print(x)
+print(y)
 
-# print("\n")
-# for i in range(n):
-#     print(matriz_LCS[i])
-#
-# print("\n")
-# for i in range(n):
-#     print(matriz_flechas[i])
+print("\n")
+for i in range(n):
+    print(matriz_LCS[i])
 
-#print("\n")
+print("\n")
+for i in range(n):
+    print(matriz_flechas[i])
 
-# for i in range(len(pila_LCS)):
-#    pila_LCS_final.append(pila_LCS.pop())
+print("\n")
 
-#print(pila_LCS_final)
+for i in range(len(pila_LCS)):
+    pila_LCS_final.append(pila_LCS.pop())
+
+print(pila_LCS_final)

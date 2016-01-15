@@ -1,4 +1,3 @@
-
 Nodos visitados con el algoritmo de busqueda en profundidad con el archivo prueba1.in
 {0, 1, 2, 3, 4}
 tiempo 0.05
