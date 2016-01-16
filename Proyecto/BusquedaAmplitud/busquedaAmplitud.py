@@ -1,12 +1,13 @@
 def bfs(graph, start):
     path = []
-    queue=[start]
+    queue = [start]
     while queue:
-        v=queue.pop(0) # pops out the first in (go wider)
+        v = queue.pop(0)  # pops out the first in (go wider)
         if v not in path:
-            path+=[v]
-            queue+=graph[v] # push v's neighbors to queue
+            path += [v]
+            queue += graph[v]  # push v's neighbors to queue
     return path
+
 
 def crear_matriz_dict_costos(Mc, Mg, n):
     auxG = set()
@@ -30,6 +31,7 @@ def costo(nodosV, matriz_costos):
     for i in range(len(nodosV) - 1):
         cost += matriz_costos[nodosV[i]][nodosV[i + 1]]
     return cost
+
 
 n = int(input())
 matriz_grafo = {}
